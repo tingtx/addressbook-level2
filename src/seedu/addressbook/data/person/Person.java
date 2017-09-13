@@ -84,9 +84,5 @@ public class Person implements ReadOnlyPerson {
         return getAsTextShowAll();
     }
 
-    @Override
-    public int compareTo(Person person){
-        return getName()-person.getName();
-    }
 
 }
