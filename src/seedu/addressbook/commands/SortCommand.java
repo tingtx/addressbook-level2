@@ -4,6 +4,7 @@ package seedu.addressbook.commands;
 import seedu.addressbook.data.person.ReadOnlyPerson;
 
 
+
 import java.util.List;
 
 public class SortCommand extends Command{
@@ -18,7 +19,7 @@ public class SortCommand extends Command{
 
     @Override
     public CommandResult execute() {
-        List<ReadOnlyPerson> sortedPerson = addressBook.getAllPersons().SortedListView();
+        List<ReadOnlyPerson> sortedPerson = addressBook.getAllPersons().alphabeticallySortedList();
         return new CommandResult(getMessageForPersonListShownSummary(sortedPerson), sortedPerson);
     }
 
